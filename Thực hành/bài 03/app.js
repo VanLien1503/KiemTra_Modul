@@ -19,13 +19,17 @@ function check() {
     }
     document.write(isFibonaci);
     for (let i = 0; i < isFibonaci.length; i++) {
-        if (isFibonaci[i] === integer) {
+        if (isFibonaci[i] == integer) {
             checkInterger = true;
+            break;
         } else {
             checkInterger = false;
         }
     }
-    alert(resultInterger);
+    if (checkInterger === true) {
+        resultInterger = true;
+    }
+    alert("Số Nguyên : " + integer + " tìm trong mảng là : " + resultInterger);
 }
 
 
