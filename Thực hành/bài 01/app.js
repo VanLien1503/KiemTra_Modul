@@ -1,8 +1,8 @@
-let find = [1, 2, 8, 7, 6, 3];
-let findMax = 0;
-for (let i = 0; i < find.length; i++) {
-    if (find[i] > findMax) {
-        findMax = find[i];
+let findMax = function (a, array) {
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] > a) {
+            array[i] = max;
+        }
     }
-}
-document.write("Số Điểm Cao Nhất Tìm Thấy Trong Mảng Là : "+findMax);
+    return array[i];
+};

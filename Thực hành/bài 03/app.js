@@ -1,8 +1,15 @@
-let isFibonaci = [];
-let integer = 5;
-let checkInterger = false;
-let resultInterger = false;
+let integer = parseInt(prompt("nhập số nguyên cần kiểm tra"));
+let fibonaci = [];
 
+function isFibonaci(integer, fibonaci) {
+
+    if (fibonaci.indexOf(integer) === -1) {
+        return false;
+    } else {
+        return true;
+    }
+}
+// tạo số Fibo rồi push vào mảng
 function check() {
     let number = parseInt(document.getElementById("number").value);
     for (let i = 0; i <= number; i++) {
@@ -14,22 +21,12 @@ function check() {
             fn = f0 + f1;
             f0 = f1;
             f1 = fn;
-            isFibonaci.push(fn);
+            fibonaci.push(fn);
         }
     }
-    document.write(isFibonaci);
-    for (let i = 0; i < isFibonaci.length; i++) {
-        if (isFibonaci[i] == integer) {
-            checkInterger = true;
-            break;
-        } else {
-            checkInterger = false;
-        }
-    }
-    if (checkInterger === true) {
-        resultInterger = true;
-    }
-    alert("Số Nguyên : " + integer + " tìm trong mảng là : " + resultInterger);
+    alert(number + " kiểm trả trong mảng  kết quả trả về là : " + isFibonaci(integer, fibonaci));
+    document.write("số FiBo trong mảng là: " + fibonaci);
 }
+
 
 
